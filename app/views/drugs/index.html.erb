@@ -1,0 +1,10 @@
+<h1>Drugs in our Scope</h1>
+
+<ul>
+	<% @drugs.each do |drug| %>
+		<li>
+			<strong><%= link_to drug.name, drug_path(drug) %></strong>	
+		</li>
+	<% end %>
+</ul>
+

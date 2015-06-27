@@ -1,0 +1,43 @@
+<% if @drug.errors.any? %>
+	<div id = "error_explanation">
+		<h2>
+		<%= pluralize(@drug.errors.count "error") %> prohibited this animal from being saved:
+		</h2>
+		<ul>
+			<% @drug.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
+<%= form_for @drug do |f| %>
+	<p>
+		<%= f.label :name %></br>
+		<%= f.text_field :name %></br>
+	</p>
+
+	<p>
+		<%= f.label :adult_dose %><br>
+		<%= f.text_field :adult_dose %><br>
+	</p>
+
+	<p>
+		<%= f.label :pediatric_dose %><br>
+		<%= f.text_field :pediatric_dose %><br>
+	</p>
+
+	<p>
+		<%= f.label :route %><br>
+		<%= f.text_field :route %><br>
+	</p>
+
+	<p>
+		<%= f.label :indications %><br>
+		<%= f.text_field :indications %><br>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

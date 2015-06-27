@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  adult_dose: MyString
+  pediatric_dose: MyString
+  inidications: MyString
+
+two:
+  name: MyString
+  adult_dose: MyString
+  pediatric_dose: MyString
+  inidications: MyString
