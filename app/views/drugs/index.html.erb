@@ -3,8 +3,12 @@
 <ul>
 	<% @drugs.each do |drug| %>
 		<li>
-			<strong><%= link_to drug.name, drug_path(drug) %></strong>	
+			<strong><%= link_to drug.name, drug_path(drug) %></strong>
+			<%= link_to "Edit", edit_drug_path(drug) %>
+			<%= link_to "Delete", drug_path(drug), method: :delete, data: { confirm: "Are you sure you want to delte #{drug.name}?" } %>
 		</li>
 	<% end %>
 </ul>
+
+<p><%= link_to "New Drug", new_drug_path %></p>
 

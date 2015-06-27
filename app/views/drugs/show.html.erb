@@ -1,5 +1,4 @@
 <h1>
-	<strong>Name:</strong>
 	<%= @drug.name %>
 </h1>
 
@@ -21,7 +20,8 @@
 <p>
 	<strong>Indications:</strong>
 	<%= @drug.indications %>
-</p
+</p>
 
-<%= link_to 'Edit', edit_drug_path(@drug) %>
-<%= link_to 'Back', drugs_path %>
+<%= link_to "Edit", edit_drug_path(@drug) %>
+<%= link_to 'Destroy', drug_path(@drug), method: :delete, data: { confirm: 'Are you sure you want to delete this drug?'} %>
+<%= link_to "Back", drugs_path %>
