@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    root 'drugs#index'
+    root 'home#index'
 
 resources :drugs do
   resources :comments

@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+	text-align: center;
+	background: url("http://www.pptclipart.com/thumb/Medical-capsule-free-ppt-backgrounds.jpg");
+	background-size: cover;
+
+}
+
+h1.welcome{
+	font-size: 70px;
+}
+
+div.welcome{
+	margin-top: 250px;
+}
+
+h1{
+	color: rgba(54, 153, 223, 1);
+	font-family: Marker Felt;
+}
+
+h2{
+	color: rgba(54, 153, 223, 1);
+	font-family: Marker Felt;
+}
+
+h3{
+	color: rgba(153, 153, 223, 1);
+	font-family: Marker Felt;
+}
+
+a{
+	color: black;
+}
+
+ul {
+ 	list-style-type: none;
+ 	padding: 0;
+ 	margin: 0;
+ 	background: rgba(54, 153, 223, 0.4);
+}
+strong{
+	font-size: 150%;
+}

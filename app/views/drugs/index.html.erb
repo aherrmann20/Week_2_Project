@@ -1,8 +1,10 @@
+<%= stylesheet_link_tag "application.css" %>
+
 <h1>Drugs in our Scope</h1>
 
 <ul>
 	<% @drugs.each do |drug| %>
-		<li>
+		<li class="drug_list">
 			<strong><%= link_to drug.name, drug_path(drug) %></strong>
 			<%= link_to "Edit", edit_drug_path(drug) %>
 			<%= link_to "Delete", drug_path(drug), method: :delete, data: { confirm: "Are you sure you want to delte #{drug.name}?" } %>
@@ -10,5 +12,5 @@
 	<% end %>
 </ul>
 
-<p><%= link_to "New Drug", new_drug_path %></p>
+<a class="btn btn-info" href=<%=new_drug_path%> >new drug </a>
 
