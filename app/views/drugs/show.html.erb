@@ -25,3 +25,32 @@
 <%= link_to "Edit", edit_drug_path(@drug) %>
 <%= link_to 'Destroy', drug_path(@drug), method: :delete, data: { confirm: 'Are you sure you want to delete this drug?'} %>
 <%= link_to "Back", drugs_path %>
+
+<%= render 'comments/comment' %>
+
+<h2>Add a Case:</h2>
+<%= form_for([@drug, @drug.comments.build]) do |f| %>
+	<p>
+		<%= f.label "Care Provider"%><br>
+		<%= f.text_field :commenter %>
+	</p>
+
+	<p>
+		<%= f.label "Patient Presentation" %><br>
+		<%= f.text_area :presentation %>
+	</p>
+
+	<p>
+		<%= f.label "Drug Administration" %><br>
+		<%= f.text_area :administration %>
+	</p>
+
+	<p>
+		<%= f.label "Patient Outcome" %><br>
+		<%= f.text_area :outcome %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
