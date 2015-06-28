@@ -1,6 +1,7 @@
 class DrugsController < ApplicationController
 
 	http_basic_authenticate_with name: "admin", password: "baeisbae", except: [:index, :show]
+	
 	def index
 		@drugs = Drug.all
 	end
